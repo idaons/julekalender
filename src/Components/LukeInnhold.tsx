@@ -23,6 +23,12 @@ export const Tekst = styled.div`
   font-size: 1.25rem;
 `;
 
+
+export const Emoji = styled.div`
+    font-size: 4rem;
+    text-align: center;
+`;
+
 interface Props {
   children?: React.ReactNode;
   nummer: number;

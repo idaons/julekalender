@@ -1,11 +1,7 @@
 import * as React from "react";
-import LukeInnhold, { Tekst } from "../Components/LukeInnhold";
+import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
 import styled from "styled-components/macro";
 
-const Emoji = styled.div`
-    font-size: 4rem;
-    text-align: center;
-`;
 
 const Luke1 = () => {
   return (

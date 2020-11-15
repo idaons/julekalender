@@ -1,10 +1,12 @@
 import * as React from "react";
-import LukeInnhold from "../Components/LukeInnhold";
+import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
 
 const Luke20 = () => {
   return (
     <LukeInnhold nummer={20}>
+      <Tekst>
 
+      </Tekst>
     </LukeInnhold>
   );
 };

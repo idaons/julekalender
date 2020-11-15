@@ -1,5 +1,5 @@
 import * as React from "react";
-import LukeInnhold from "../Components/LukeInnhold";
+import LukeInnhold, { Tekst } from "../Components/LukeInnhold";
 
 const Luke11 = () => {
   return (

@@ -1,9 +1,9 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const theme = {
-    background: "#091B43", //"#10484b",
-    lukeSize: "12rem"
-}
+  background: "#091B43", //"#10484b",
+  lukeSize: "12rem",
+};
 
 export const GlobalStyles = createGlobalStyle`
   body, html {

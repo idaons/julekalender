@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components/macro";
 import { useState } from "react";
 import Julekule from "./Julekule";
-import {  getStraffe, isOdd } from "../utils";
+import { getStraffe, isOdd } from "../utils";
 import { isLukeAvailible } from "./LukeWrapper";
 
 const StyledLuke = styled.div`
@@ -30,7 +30,8 @@ export const StengtLuketekst = styled.span<{ nummer: number }>`
 const StyledLink = styled(Link)`
   text-decoration: none;
   transition: 0.3s;
-  &:hover {
+  &:hover,
+  &:focus {
     transform: scale(1.1);
 
     ${ÅpenLuketekst} {
@@ -41,12 +42,11 @@ const StyledLink = styled(Link)`
   }
 `;
 
-
 const Luke = (props: { nummer: number }) => {
   const [lukeErÅpen, setLukeErÅpen] = useState(true);
 
   const onLukeClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    if(!isLukeAvailible(props.nummer)) {
+    if (!isLukeAvailible(props.nummer)) {
       setLukeErÅpen(false);
       e.preventDefault();
     }
@@ -57,9 +57,7 @@ const Luke = (props: { nummer: number }) => {
         {lukeErÅpen ? (
           <ÅpenLuketekst>Luke {props.nummer}</ÅpenLuketekst>
         ) : (
-          <StengtLuketekst nummer={props.nummer}>
-            Nå var du litt tidlig ute! {getStraffe(props.nummer)}
-          </StengtLuketekst>
+          <StengtLuketekst nummer={props.nummer}>Nå var du litt tidlig ute! {getStraffe(props.nummer)}</StengtLuketekst>
         )}
       </Julekule>
     </StyledLink>

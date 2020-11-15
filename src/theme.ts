@@ -12,6 +12,11 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Baloo Da 2', cursive;
   }
   
+  *:focus {
+    outline: none;
+    filter: drop-shadow(0 0 1rem goldenrod);
+  }
+  
   h1 {
     font-family: 'Lobster Two', cursive;
     letter-spacing: .1em;

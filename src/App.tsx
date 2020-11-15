@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(${theme.lukeSize}, 1fr));
   grid-row-gap: 3rem;
   grid-column-gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 10rem;
   max-width: 60rem;
   margin: 0 auto;
 `;
@@ -22,11 +22,11 @@ const Header = styled.header`
     font-size: 5rem;
     margin-bottom: 1rem;
   }
-  
+
   span {
     font-size: 1.8rem;
-    font-family: 'Lobster Two', cursive;
-    letter-spacing: .15em;
+    font-family: "Lobster Two", cursive;
+    letter-spacing: 0.15em;
   }
 `;
 
@@ -48,7 +48,7 @@ function App() {
             </Wrapper>
           </Route>
           <Route path="/:lukeNummer">
-            <LukeWrapper/>
+            <LukeWrapper />
           </Route>
         </Switch>
       </Router>

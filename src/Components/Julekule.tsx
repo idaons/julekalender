@@ -32,47 +32,44 @@ const JulekuleStyle = styled.div<{nummer: number}>`
     align-items: center;
     justify-content: center;
     transform: ${props => isOdd(props.nummer) ? 'rotate( -5deg )' :'rotate( 5deg )' };
-
-
-    // snor-feste
-    &::before {
-        position: absolute;
-        content: "";
-        display: block;
-        width: 1rem;
-        height: 0.5rem;
-        top: -0.46rem;
-        background-color: white;
-        left: 50%;
-        margin-left: -0.5rem;
-        border-radius: 2px 2px 0 0;
-        background-image: linear-gradient( to right, rgba(0, 0, 0, 0), rgba( 0, 0, 0, 0.2 ), rgba( 0, 0, 0, 0 ) );
-    }
-    
-    .snor {
-        position: absolute;
-        border-color: white;
-        height: 1.25rem;
-        width: 0.75rem;
-        border-width: 1px 1px 0 1px;
-        top: -1.75rem;
-        border-style: solid;
-        border-radius: 50% 50% 0 0;
-        left: calc( ${theme.lukeSize}/2);
-
-        &::before {
-            content: "";
-            display: block;
-            height: 50%;
-            background-color: ${theme.background};
-            position: absolute;
-            bottom: 0;
-            width: 0.1875rem;
-            right: -0.125rem;
-        }
-    }
 `;
 
+const Base = styled.span`
+position: absolute;
+content: "";
+display: block;
+width: 1rem;
+height: 0.5rem;
+top: -0.46rem;
+background-color: white;
+left: 50%;
+margin-left: -0.5rem;
+border-radius: 2px 2px 0 0;
+background-image: linear-gradient( to right, rgba(0, 0, 0, 0), rgba( 0, 0, 0, 0.2 ), rgba( 0, 0, 0, 0 ) );
+`;
+
+const Snor = styled.span`
+position: absolute;
+border-color: white;
+height: 1.25rem;
+width: 0.75rem;
+border-width: 2px 2px 0 2px;
+top: -1.75rem;
+border-style: solid;
+border-radius: 50% 50% 0 0;
+left: calc( ${theme.lukeSize}/2);
+
+&::before {
+    content: "";
+    display: block;
+    height: 50%;
+    background-color: ${theme.background};
+    position: absolute;
+    bottom: 0;
+    width: 0.1875rem;
+    right: -0.125rem;
+}
+`;
 
 interface Props {
     children?: React.ReactNode;
@@ -83,7 +80,8 @@ const Julekule = (props: Props) => {
 
     return (
         <JulekuleStyle nummer={props.nummer}>
-            <span className="snor" />
+            <Snor />
+            <Base />
             {props.children}
         </JulekuleStyle>
     );

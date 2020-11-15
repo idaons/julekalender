@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from "styled-components/macro";
-import Luke from "./Components/Luke";
-import Luke1 from "./Innhold/Luke1";
-import Luke2 from "./Innhold/Luke2";
 import { GlobalStyles, theme } from "./theme";
+import Luke from "./Components/Luke";
+import LukeWrapper from "./Components/LukeWrapper";
 
 const Wrapper = styled.div`
   display: grid;
@@ -48,11 +47,8 @@ function App() {
               ))}
             </Wrapper>
           </Route>
-          <Route path="/1">
-            <Luke1 />
-          </Route>
-          <Route path="/2">
-            <Luke2 />
+          <Route path="/:lukeNummer">
+            <LukeWrapper/>
           </Route>
         </Switch>
       </Router>

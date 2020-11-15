@@ -2,6 +2,10 @@ import * as React from "react";
 import LukeInnhold, { Tekst } from "../Components/LukeInnhold";
 import styled from "styled-components/macro";
 
+const Emoji = styled.div`
+    font-size: 4rem;
+    text-align: center;
+`;
 
 const Luke1 = () => {
   return (
@@ -10,7 +14,8 @@ const Luke1 = () => {
           Hvis man får lyst til å sette seg på en standup, er den for lang. <br />
           Forslag til de som synes den fortsatt er for lang:
           Kjør push-up i steden. <br/>
-          Da blir møte veldig kort, eller så blir man veldig sterk! 🏋️‍♀
+          Da blir møtet veldig kort, eller så blir man veldig sterk!
+          <Emoji>🏋️‍♀</Emoji>
         </Tekst>
       </LukeInnhold>
     );

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components/macro";
 import { useState } from "react";
 import Julekule from "./Julekule";
-import { getRandomFromArray, isOdd } from "../utils";
+import {  getStraffe, isOdd } from "../utils";
+import { isLukeAvailible } from "./LukeWrapper";
 
 const StyledLuke = styled.div`
   background: red;
@@ -40,15 +41,12 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const straffer = ["knebøy", "pushups", "situps", "utfall", "burpees", "spensthopp"];
 
 const Luke = (props: { nummer: number }) => {
   const [lukeErÅpen, setLukeErÅpen] = useState(true);
 
   const onLukeClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    const currentDate = new Date();
-    const openDate = new Date(2020, 10, props.nummer);
-    if (openDate > currentDate) {
+    if(!isLukeAvailible(props.nummer)) {
       setLukeErÅpen(false);
       e.preventDefault();
     }
@@ -60,8 +58,7 @@ const Luke = (props: { nummer: number }) => {
           <ÅpenLuketekst>Luke {props.nummer}</ÅpenLuketekst>
         ) : (
           <StengtLuketekst nummer={props.nummer}>
-            Nå var du litt tidlig ute! 10 straffe-{straffer[getRandomFromArray(straffer.length)]} mens du venter til{" "}
-            {props.nummer}. desember
+            Nå var du litt tidlig ute! {getStraffe(props.nummer)}
           </StengtLuketekst>
         )}
       </Julekule>

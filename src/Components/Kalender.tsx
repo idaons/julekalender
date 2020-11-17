@@ -2,6 +2,7 @@ import * as React from "react";
 import Luke from "./Luke";
 import styled from "styled-components/macro";
 import { theme } from "../theme";
+import { Emoji } from "./LukeInnhold";
 
 const Wrapper = styled.div`
   display: grid;
@@ -33,7 +34,12 @@ function Kalender() {
     <div>
       <Header>
         <h1>Julekalender</h1>
-        <span>🎅 for stillesittende kontor-nisser 🎅</span>
+        <span>
+          <Emoji ariaLabel="nisse-emoji" content="🎅"/>
+          for stillesittende kontor-nisser
+          <Emoji ariaLabel="nisse-emoji" content="🎅"/>
+
+        </span>
       </Header>
       <Wrapper>
         {[...Array(24)].map((item, index) => (

@@ -1,17 +1,18 @@
 import * as React from "react";
-import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
-import styled from "styled-components/macro";
-
+import LukeInnhold, {Emoji, Tekst } from "../Components/LukeInnhold";
 
 const Luke1 = () => {
   return (
       <LukeInnhold nummer={1}>
         <Tekst>
-          Hvis man får lyst til å sette seg på en standup, er den for lang. <br />
-          Forslag til de som synes den fortsatt er for lang:
-          Kjør push-up i steden. <br/>
-          Da blir møtet veldig kort, eller så blir man veldig sterk!
-          <Emoji>🏋️‍♀</Emoji>
+          <h2>Dorull-knebøy!</h2>
+          <p>Forklaring:<br/>
+            Lag et dorulltårn av tre ruller. <Emoji ariaLabel="toiletpaper-emoji" content="🧻 🧻 🧻"/> <br/>
+            Glemt å hamstre doruller sier du? Da blir bare øvelsen tyngere og du blir sterkere! <br />
+            Stå med en hoftebredde avstand mellom bena og ta en dyp knebøy helt til rumpa treffer rullene.
+            Gjenta så mange repetisjoner du rekker på 45 sekunder.
+          </p>
+          <p>Antall: <br/> 3 sett á 45 sekunder </p>
         </Tekst>
       </LukeInnhold>
     );

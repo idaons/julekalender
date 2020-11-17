@@ -24,13 +24,13 @@ import Luke21 from "../Innhold/Luke21";
 import Luke22 from "../Innhold/Luke22";
 import Luke23 from "../Innhold/Luke23";
 import Luke24 from "../Innhold/Luke24";
-import LukeInnhold from "./LukeInnhold";
+import LukeInnhold, { Emoji } from "./LukeInnhold";
 import { getStraffe } from "../utils";
 
 export const isLukeAvailible = (nummer: number) => {
     const currentDate = new Date();
     // Todo: bytt til 11
-    const openDate = new Date(2020, 10, nummer);
+    const openDate = new Date(2020, 9, nummer);
     if (openDate > currentDate) {
       return false
     }
@@ -45,7 +45,7 @@ const LukeWrapper = () => {
   const { lukeNummer } = useParams<ParamTypes>();
  const lukeNummerAsInt:number = parseInt(lukeNummer);
  if(lukeNummerAsInt > 24 || lukeNummerAsInt <1 || isNaN(lukeNummerAsInt)) {
-   return <LukeInnhold nummer={404}>Ingen luke her..😢</LukeInnhold>;
+   return <LukeInnhold nummer={404}>Ingen luke her..<Emoji ariaLabel="emoji-sad" content="😢"/></LukeInnhold>;
  }
 
  if(!isLukeAvailible(lukeNummerAsInt)) {
@@ -104,7 +104,7 @@ const LukeWrapper = () => {
    case "24":
      return <Luke24 />;
    default:
-     return <div>Ingen luke her..😢</div>;
+     return <div>Ingen luke her..<Emoji ariaLabel="emoji-sad" content="😢"/></div>;
  }
 
 

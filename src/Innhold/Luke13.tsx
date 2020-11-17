@@ -1,12 +1,13 @@
 import * as React from "react";
-import LukeInnhold, { Tekst } from "../Components/LukeInnhold";
+import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
 import styled from "styled-components";
 
-const Emoji = styled.div`
+const StyledEmoji = styled.div`
     font-size: 3rem;
-    margin-top: 1rem;
+    margin: 1rem 0 3rem;
     text-align: center;
 `;
+
 
 const Luke13 = () => {
   return (
@@ -15,8 +16,10 @@ const Luke13 = () => {
         Lucia og tredje søndag i advent! <br/>
         Lag en lussekatt-deig som du elter for hånd.
         <br/>
-        <Emoji>🐈</Emoji>
-        <blockquote><i>Det må da være lov å kose seg litt i disse dager</i></blockquote>
+        <StyledEmoji>
+          <Emoji ariaLabel="cat-emoji" content="🐈"/>
+        </StyledEmoji>
+       <i>- Det må jo være lov å kose seg litt i disse dager</i>
       </Tekst>
     </LukeInnhold>
   );

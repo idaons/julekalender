@@ -19,15 +19,30 @@ const InnholdStyle = styled.div`
 
 
 export const Tekst = styled.div`
-  max-width: 50rem;
+  max-width: 45rem;
   font-size: 1.25rem;
 `;
 
 
-export const Emoji = styled.div`
-    font-size: 4rem;
+export const EmojiStyle = styled.span`
+    font-size: 3rem;
     text-align: center;
+    display: block;
 `;
+
+
+export const StyledEmoji = (props: { ariaLabel: string, content: string}) => {
+  return (
+  <EmojiStyle role="img" aria-label={props.ariaLabel}>
+    {props.content}
+  </EmojiStyle>
+  )
+}
+
+
+export const Emoji = (props: { ariaLabel: string, content: string }) => {
+  return <span role="img" aria-label={props.ariaLabel}>{props.content}</span>
+}
 
 interface Props {
   children?: React.ReactNode;

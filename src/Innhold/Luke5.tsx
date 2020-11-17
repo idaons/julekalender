@@ -1,19 +1,19 @@
 import * as React from "react";
-import LukeInnhold, { Tekst } from "../Components/LukeInnhold";
+import LukeInnhold, { StyledEmoji, Tekst } from "../Components/LukeInnhold";
 
 
 const Luke5 = () => {
   return (
     <LukeInnhold nummer={5}>
       <Tekst>
-        Helg! Da sitter du kanskje ikke så stille?
-
-        Da blir det dagens vits istedet:
+        <h2>Helg!</h2>
+        Gå en tur i nabolaget mens du øver på å presentere en vits til teamet,
+        feks denne:
         <p>
           Hørt om utvikleren som ville teste ut en ny rett?
           Han serverte beta-suppe.
+          <StyledEmoji ariaLabel="suppe-emoji" content="🥣" />
         </p>
-
       </Tekst>
     </LukeInnhold>
   );

@@ -24,10 +24,25 @@ export const Tekst = styled.div`
 `;
 
 
-export const Emoji = styled.div`
-    font-size: 4rem;
+export const EmojiStyle = styled.span`
+    font-size: 3rem;
     text-align: center;
+    display: block;
 `;
+
+export const StyledEmoji = (props: { ariaLabel: string, children: React.ReactNode }) => {
+  return (
+  <EmojiStyle role="img" aria-label={props.ariaLabel}>
+    {props.children}
+  </EmojiStyle>
+  )
+}
+
+
+
+export const Emoji = (props: { ariaLabel: string, children: React.ReactNode }) => {
+  return <span role="img" aria-label={props.ariaLabel}>{props.children}</span>
+}
 
 interface Props {
   children?: React.ReactNode;

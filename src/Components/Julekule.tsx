@@ -5,7 +5,6 @@ import { getRandomFromArray, isOdd } from "../utils";
 
 const farger = ["#FF0700", "#FFAB00", "#123EAB", "#00C90D"];
 
-const rotations = [" -5deg ", "5deg"];
 
 const JulekuleStyle = styled.div<{ nummer: number }>`
   background-color: ${() => farger[getRandomFromArray(farger.length)]};

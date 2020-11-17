@@ -6,12 +6,6 @@ import Julekule from "./Julekule";
 import { getStraffe, isOdd } from "../utils";
 import { isLukeAvailible } from "./LukeWrapper";
 
-const StyledLuke = styled.div`
-  background: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
 export const ÅpenLuketekst = styled.span`
   color: white;

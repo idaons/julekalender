@@ -30,7 +30,7 @@ import { getStraffe } from "../utils";
 export const isLukeAvailible = (nummer: number) => {
     const currentDate = new Date();
     // Todo: bytt til 11
-    const openDate = new Date(2020, 10, nummer);
+    const openDate = new Date(2020, 9, nummer);
     if (openDate > currentDate) {
       return false
     }

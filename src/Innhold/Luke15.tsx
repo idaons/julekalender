@@ -117,5 +117,4 @@ const Luke15 = () => {
   );
 };
 
-
 export default Luke15;

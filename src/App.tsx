@@ -10,7 +10,6 @@ function App() {
       <GlobalStyles />
       <Router>
         <Switch>
-
           <Route path="/julekalender/:lukeNummer">
             <LukeWrapper />
           </Route>

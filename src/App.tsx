@@ -10,11 +10,12 @@ function App() {
       <GlobalStyles />
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Kalender />
-          </Route>
-          <Route path="/:lukeNummer">
+
+          <Route path="/julekalender/:lukeNummer">
             <LukeWrapper />
+          </Route>
+          <Route path="">
+            <Kalender />
           </Route>
         </Switch>
       </Router>

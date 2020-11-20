@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1cc0c5d1.chunk.css",
+    "main.js": "/static/js/main.a0b500d9.chunk.js",
+    "main.js.map": "/static/js/main.a0b500d9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.35caecfc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.35caecfc.js.map",
+    "static/js/2.e95ae571.chunk.js": "/static/js/2.e95ae571.chunk.js",
+    "static/js/2.e95ae571.chunk.js.map": "/static/js/2.e95ae571.chunk.js.map",
+    "static/js/3.152a1176.chunk.js": "/static/js/3.152a1176.chunk.js",
+    "static/js/3.152a1176.chunk.js.map": "/static/js/3.152a1176.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f574a1e4a1887e32d7578d811d4e98d6.js": "/precache-manifest.f574a1e4a1887e32d7578d811d4e98d6.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.1cc0c5d1.chunk.css.map": "/static/css/main.1cc0c5d1.chunk.css.map",
+    "static/js/2.e95ae571.chunk.js.LICENSE.txt": "/static/js/2.e95ae571.chunk.js.LICENSE.txt",
+    "static/media/absurdgalleriet.jpg": "/static/media/absurdgalleriet.1ebb3bdf.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.35caecfc.js",
+    "static/js/2.e95ae571.chunk.js",
+    "static/css/main.1cc0c5d1.chunk.css",
+    "static/js/main.a0b500d9.chunk.js"
+  ]
+}

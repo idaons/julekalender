@@ -92,7 +92,7 @@ const Luke15 = () => {
   }
 
   return (
-    <LukeInnhold nummer={11}>
+    <LukeInnhold nummer={15}>
       <Tekst>
         <h2>Finn din yoga-posisjon - del 2! <Emoji ariaLabel="lotus-emoji" content="🧘"/> </h2>
         <p>Hvilket dyr identifiserer du deg mest med?

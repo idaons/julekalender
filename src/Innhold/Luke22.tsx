@@ -6,7 +6,7 @@ const Luke22 = () => {
     <LukeInnhold nummer={22}>
       <Tekst >
         <h2>For vonde skuldre og nakke: <Emoji ariaLabel="giraffe-emoji" content="🦒"/></h2>
-        <p>Forklaring:<br/>
+        <p>
           Stå med liten bøy i knær og hofter. Kjenn at du er i en stødig posisjon, og lut litt med kroppen.
           Ha fokus på et punkt foran deg som du skal skyggebokse mot.
           Du trenger ikke strekke helt ut i albuer, men kjør et jevnt tempo og roter i overkroppen.

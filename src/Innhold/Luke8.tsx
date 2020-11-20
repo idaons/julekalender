@@ -6,11 +6,11 @@ const Luke8 = () => {
     <LukeInnhold nummer={8}>
       <Tekst>
       <h2>Tøye på overkropp <Emoji ariaLabel="gesturing-emoji" content="🙆"/></h2>
-      <p>Forklaring:<br/>
+      <p>
         Løft begge armene over hodet og senk overkroppen langsomt til den ene siden.
         Kjenn at det strekker på utsiden av overkroppen.
         Hold i 5 sekunder før du gjentar øvelsen på den andre siden.
-        Gjenta 3 ganger på hver side.
+        Strekk totalt 3 ganger på hver side.
       </p>
       <p>Når: <br/> En gang før lunsj, og en etter.</p>
       </Tekst>

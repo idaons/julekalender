@@ -12,7 +12,6 @@ const Luke23 = () => {
           Syng <Emoji ariaLabel="note-emoji" content="🎵"/> Så går vi rundt om en enebærbusk
           <Emoji ariaLabel="note-emoji" content="🎵"/>, og ta et spensthopp
           hver gang du sier "busk".
-
         </p>
         <StyledEmoji ariaLabel="tree-emoji" content="🎄" />
       </Tekst >

@@ -10,7 +10,7 @@ const Luke14 = () => {
           The World’s Greatest Stretch
           <Emoji ariaLabel="tromme-emoji" content="🥁"/>
         </h2>
-        <p>Forklaring:<br/>
+        <p>
           Start i høy plankeposisjon.
           Plasser det ene beinet rett utenfor hånden på samme side og senk setet forsiktig ned.
           Før armen opp, mens du følger armen med blikket. Gjenta på motsatt side.

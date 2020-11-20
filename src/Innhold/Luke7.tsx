@@ -6,7 +6,7 @@ const Luke7 = () => {
     <LukeInnhold nummer={7}>
       <Tekst>
       <h2>Skulderrulle <Emoji ariaLabel="circle-emoji" content="🔃"/></h2>
-      <p>Forklaring:<br/>
+      <p>
         Rull begge skuldrene i store sirkler, mens armene henger ned langs siden.<br/>
         Gjør øvelsen i begge retninger.
       </p>

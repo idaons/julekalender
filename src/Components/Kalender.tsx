@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(${theme.lukeSize}, 1fr));
   grid-row-gap: 3rem;
   grid-column-gap: 1rem;
+  justify-items: center;
   padding: 1rem 2rem 10rem;
   max-width: 60rem;
   margin: 0 auto;
@@ -18,8 +19,9 @@ const Header = styled.header`
   text-align: center;
   margin: 1.5rem auto 4rem;
   h1 {
-    font-size: 5rem;
+    font-size: min(5rem, 15vmin);
     margin-bottom: 1rem;
+    word-break: break-word;
   }
 
   span {
@@ -35,10 +37,9 @@ function Kalender() {
       <Header>
         <h1>Julekalender</h1>
         <span>
-          <Emoji ariaLabel="nisse-emoji" content="🎅"/>
+          <Emoji ariaLabel="nisse-emoji" content="🎅" />
           for stillesittende kontor-nisser
-          <Emoji ariaLabel="nisse-emoji" content="🎅"/>
-
+          <Emoji ariaLabel="nisse-emoji" content="🎅" />
         </span>
       </Header>
       <Wrapper>

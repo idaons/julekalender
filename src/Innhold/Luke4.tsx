@@ -1,11 +1,13 @@
 import * as React from "react";
 import LukeInnhold, { Tekst } from "../Components/LukeInnhold";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const StyledIframe = styled.iframe`
   margin-top: 1rem;
   width: 50rem;
+  max-width: 95vw;
   height: 27rem;
+  max-height: 80vh;
 `;
 
 const Luke4 = () => {

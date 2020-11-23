@@ -4,19 +4,18 @@ import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
 const Luke22 = () => {
   return (
     <LukeInnhold nummer={22}>
-      <Tekst >
-        <h2>For vonde skuldre og nakke: <Emoji ariaLabel="giraffe-emoji" content="🦒"/></h2>
+      <Tekst>
+        <h2>
+          Kattestrekk <Emoji ariaLabel="cat-emoji" content="🐈" />
+        </h2>
         <p>
-          Stå med liten bøy i knær og hofter. Kjenn at du er i en stødig posisjon, og lut litt med kroppen.
-          Ha fokus på et punkt foran deg som du skal skyggebokse mot.
-          Du trenger ikke strekke helt ut i albuer, men kjør et jevnt tempo og roter i overkroppen.
-          Stå i ro med underkroppen.
-          Velg om du kjører høyt tempo eller store bevegelser. Pass på å få med hele bevegelsen på skuldra.
-          Hold skuldrene lave gjennom hele øvelen
+          Stå på alle fire med knærne rett under hoftene og håndbakene rett under skuldrene. På innpust svaier du
+          ryggen, samtidig som du ser opp i taket. På utpust skyt rygg som en katt. Gjenta 10 ganger.
         </p>
-        <p>Når: <br/> Nå, eller hver gang du har lyst til å slå noen <Emoji ariaLabel="punch-emoji" content="🥊"/> </p>
-        <p>Antall: <br/> 50 repetisjoner</p>
-      </Tekst >
+        <p>
+          Når: <br /> Hver gang noen @channel'er deg på slack{" "}
+        </p>
+      </Tekst>
     </LukeInnhold>
   );
 };

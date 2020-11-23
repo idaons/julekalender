@@ -1,25 +1,21 @@
 import * as React from "react";
-import LukeInnhold, { Tekst } from "../Components/LukeInnhold";
-import styled from "styled-components";
-
-
-const StyledIframe = styled.iframe`
-    margin-top: 1rem;
-     width: 50rem;
-     height: 27rem;
-`;
+import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
 
 const Luke3 = () => {
   return (
     <LukeInnhold nummer={3}>
       <Tekst>
-        <h2>Løs opp i stive kontormuskler</h2>
-        Videoen er så kort at du rekker det i lunsjen!
+        <h2>Dorull-knebøy!</h2>
+        <p>
+          Lag et dorulltårn av tre ruller. <Emoji ariaLabel="toiletpaper-emoji" content="🧻 🧻 🧻" /> <br />
+          Glemt å hamstre doruller sier du? Da blir bare øvelsen tyngere og du blir sterkere! <br />
+          Stå med en hoftebredde avstand mellom bena og ta en dyp knebøy helt til rumpa treffer rullene. Gjenta så mange
+          repetisjoner du rekker på 45 sekunder.
+        </p>
+        <p>
+          Antall: <br /> 3 sett á 45 sekunder{" "}
+        </p>
       </Tekst>
-      <StyledIframe src="https://www.youtube.com/embed/xPvQgXFjNAg" frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen>
-      </StyledIframe>
     </LukeInnhold>
   );
 };

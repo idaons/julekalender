@@ -9,10 +9,10 @@ const Luke1 = () => {
           <Emoji ariaLabel="party-emoji" content="🎉" /> Første luke! <Emoji ariaLabel="party-emoji" content="🎉" />{" "}
         </h2>
         <p>
-          Realistisk som jeg er, innser jeg faren for at det også kan bli din eneste luke..
-          <Emoji ariaLabel="crying-emoji" content="😢" /> <br />
-          Derfor skal du få en oppgave som sikrer litt ekstra aktivitet resten av adventstida!
+          Realistisk som jeg er, innser jeg at det kanskje også blir din siste luke..
+          <Emoji ariaLabel="crying-emoji" content="😢" />
         </p>
+        <p>Derfor skal du få en oppgave som sikrer litt ekstra aktivitet resten av adventstida!</p>
         <p>
           <ul>
             <li>

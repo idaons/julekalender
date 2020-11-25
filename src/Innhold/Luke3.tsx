@@ -8,7 +8,9 @@ const Luke3 = () => {
         <h2>Dorull-knebøy!</h2>
         <p>
           Lag et dorulltårn av tre ruller. <Emoji ariaLabel="toiletpaper-emoji" content="🧻 🧻 🧻" /> <br />
-          Glemt å hamstre doruller sier du? Da blir bare øvelsen tyngere og du blir sterkere! <br />
+          Glemt å hamstre doruller sier du? Da blir bare øvelsen tyngere og du blir sterkere!{" "}
+        </p>
+        <p>
           Stå med en hoftebredde avstand mellom bena og ta en dyp knebøy helt til rumpa treffer rullene. Gjenta så mange
           repetisjoner du rekker på 45 sekunder.
         </p>

@@ -4,15 +4,19 @@ import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
 const Luke17 = () => {
   return (
     <LukeInnhold nummer={17}>
-      <Tekst >
-        <h2>Dagens øvelse: Bryst <Emoji ariaLabel="duck-emoji" content="🦆"/></h2>
+      <Tekst>
+        <h2>
+          Skulderrulle <Emoji ariaLabel="circle-emoji" content="🔃" />
+        </h2>
         <p>
-          Sitt på en stol med god holdning i ryggen.
-          Strekk armene bakover, samle hendene bak ryggen og press dem litt bakover og oppover.
-          Hold stillingen i 5- 10 gode pust.
+          Rull begge skuldrene i store sirkler, mens armene henger ned langs siden.
+          <br />
+          Gjør øvelsen i begge retninger.
         </p>
-        <p>Når: <br/> Hver gang du har et videomøte </p>
-      </Tekst >
+        <p>
+          Antall: <br /> 10 ruller hver vei{" "}
+        </p>
+      </Tekst>
     </LukeInnhold>
   );
 };

@@ -9,7 +9,7 @@ const Luke1 = () => {
           <Emoji ariaLabel="party-emoji" content="🎉" /> Første luke! <Emoji ariaLabel="party-emoji" content="🎉" />{" "}
         </h2>
         <p>
-          Realistisk som jeg er, innser jeg at det kanskje også blir din siste luke..
+          Realistisk som jeg er, innser jeg at det kanskje også blir din siste..
           <Emoji ariaLabel="crying-emoji" content="😢" />
         </p>
         <p>Derfor skal du få en oppgave som sikrer litt ekstra aktivitet resten av adventstida!</p>
@@ -17,11 +17,11 @@ const Luke1 = () => {
           <ul>
             <li>
               Finn det mest kronglete stedet i boligen din. Det kan være på loftet, i kjellern, øverst i det høyeste
-              skapet, innerst i hjørnet under senga eller lignende{" "}
+              skapet, lengst under senga eller lignende{" "}
             </li>
-            <li>Ta din favoritt-sjokoladekalender (eller gå å kjøp en hvis du ikke har) og legg den der</li>
+            <li>Ta din favoritt-julekalender (eller gå å kjøp en hvis du ikke har) og legg den der</li>
             <li>
-              Spis dagens luke og la kalenderen ligge, slik at den blir like vanskelig å komme til resten av dagene
+              Åpne dagens luke og la kalenderen ligge, slik at den blir like vanskelig å komme til resten av dagene
             </li>
           </ul>
         </p>

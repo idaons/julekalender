@@ -5,12 +5,16 @@ const Luke7 = () => {
   return (
     <LukeInnhold nummer={7}>
       <Tekst>
-      <h2>Skulderrulle <Emoji ariaLabel="circle-emoji" content="🔃"/></h2>
-      <p>
-        Rull begge skuldrene i store sirkler, mens armene henger ned langs siden.<br/>
-        Gjør øvelsen i begge retninger.
-      </p>
-      <p>Antall: <br/> 10 ruller hver vei </p>
+        <h2>
+          Forebygging av musearm <Emoji ariaLabel="mouse-emoji" content="🐭" />
+        </h2>
+        <p>
+          Sett deg inntil et bord og legg underarmen din på bordet. Hånden og håndleddet skal ligge rett utenfor
+          bordkanten. Hold en vannflaske eller manual i hånden. Strekk kjapt opp i håndleddet og senk rolig ned igjen.
+        </p>
+        <p>
+          Antall: <br />2 ganger om av dagen{" "}
+        </p>
       </Tekst>
     </LukeInnhold>
   );

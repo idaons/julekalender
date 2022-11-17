@@ -29,7 +29,7 @@ import { getStraffe } from "../utils";
 
 export const isLukeAvailible = (nummer: number) => {
   const currentDate = new Date();
-  const openDate = new Date(currentDate.getFullYear(), 11, nummer);
+  const openDate = new Date(currentDate.getFullYear() - 1, 11, nummer);
   if (openDate > currentDate) {
     return false;
   }

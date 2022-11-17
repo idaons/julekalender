@@ -13,18 +13,14 @@ const Luke1 = () => {
           <Emoji ariaLabel="crying-emoji" content="😢" />
         </p>
         <p>Derfor skal du få en oppgave som sikrer litt ekstra aktivitet resten av adventstida!</p>
-        <p>
-          <ul>
-            <li>
-              Finn det mest kronglete stedet i boligen din. Det kan være på loftet, i kjellern, øverst i det høyeste
-              skapet, lengst under senga eller lignende{" "}
-            </li>
-            <li>Ta din favoritt-julekalender (eller gå å kjøp en hvis du ikke har) og legg den der</li>
-            <li>
-              Åpne dagens luke og la kalenderen ligge, slik at den blir like vanskelig å komme til resten av dagene
-            </li>
-          </ul>
-        </p>
+        <ul>
+          <li>
+            Finn det mest kronglete stedet i boligen din. Det kan være på loftet, i kjellern, øverst i det høyeste
+            skapet, lengst under senga eller lignende{" "}
+          </li>
+          <li>Ta din favoritt-julekalender (eller gå å kjøp en hvis du ikke har) og legg den der</li>
+          <li>Åpne dagens luke og la kalenderen ligge, slik at den blir like vanskelig å komme til resten av dagene</li>
+        </ul>
       </Tekst>
     </LukeInnhold>
   );

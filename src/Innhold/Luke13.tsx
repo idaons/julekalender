@@ -13,13 +13,12 @@ const Luke13 = () => {
     <LukeInnhold nummer={13}>
       <Tekst>
         <h2>Lucia!</h2>
-        Og tredje søndag i advent. <br />
         Lag en lussekatt-deig som du elter for hånd.
         <br />
         <StyledEmoji>
           <Emoji ariaLabel="cat-emoji" content="🐈" />
         </StyledEmoji>
-        <i>- Det må jo være lov å kose seg litt i disse dager</i>
+        <i>- Det må jo være lov å kose seg litt</i>
       </Tekst>
     </LukeInnhold>
   );

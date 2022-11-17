@@ -1,22 +1,11 @@
 import * as React from "react";
-import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
+import LukeInnhold from "../Components/LukeInnhold";
+import Lordag3 from "./Lordag3";
 
 const Luke17 = () => {
   return (
     <LukeInnhold nummer={17}>
-      <Tekst>
-        <h2>
-          Skulderrulle <Emoji ariaLabel="circle-emoji" content="🔃" />
-        </h2>
-        <p>
-          Rull begge skuldrene i store sirkler, mens armene henger ned langs siden.
-          <br />
-          Gjør øvelsen i begge retninger.
-        </p>
-        <p>
-          Antall: <br /> 10 ruller hver vei{" "}
-        </p>
-      </Tekst>
+      <Lordag3 />
     </LukeInnhold>
   );
 };

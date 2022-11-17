@@ -5,13 +5,15 @@ const Luke12 = () => {
   return (
     <LukeInnhold nummer={12}>
       <Tekst>
-        <h2>Helg igjen jo!</h2>
-        Og i morgen er sjølveste luciadagen. Det krever forberedelse: <br />
-        Gå (type kappgang) til nærmeste apotek og kjøp safran. <br />
+        <h2>Korsrygg</h2>
         <p>
-          Stå på høyre ben mens du venter på din tur .
-          <StyledEmoji ariaLabel="emoji-leg" content="🦵" />
-          Stå på venstre ben mens du blir ekspedert.
+          Stå oppreist med svak bøy i knærne. Bøy deg sakte fremover virvel for virvel. Hold vekten på hælene. Pust
+          rolig og slapp av i magen og nakken. Rull sakte opp igjen virvel for virvel, hodet til slutt. Bruk 30-60
+          sekunder per runde.
+        </p>
+        <StyledEmoji ariaLabel="kamel-emoji" content="🐫" />
+        <p>
+          Når: <br /> Gjør øvelsen hver gang du går gjennom en dør
         </p>
       </Tekst>
     </LukeInnhold>

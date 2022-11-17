@@ -11,13 +11,19 @@ const StyledIframe = styled.iframe`
   border: none;
 `;
 
+const StyledLink = styled.a`
+  color: lightgoldenrodyellow;
+`;
+
 const Luke24 = () => {
   return (
     <LukeInnhold nummer={24}>
       <h2>Fordi det er gøy: sliding puzzle!</h2>
       <StyledIframe src="https://idaons.github.io/css-puzzle/" />
       <p>
-        PS: fungerer uten javascript <Emoji ariaLabel="nerd-emoji" content="🤓" />{" "}
+        PS: fungerer uten javascript{" "}
+        <StyledLink href={"https://idaons.github.io/css-puzzle/"}>på denne siden</StyledLink>.{" "}
+        <Emoji ariaLabel="nerd-emoji" content=" 🤓 " />{" "}
       </p>
     </LukeInnhold>
   );

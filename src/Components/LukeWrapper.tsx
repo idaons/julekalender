@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import { useParams } from "react-router-dom";
 import Luke1 from "../Innhold/Luke1";
 import Luke2 from "../Innhold/Luke2";
@@ -28,102 +28,93 @@ import LukeInnhold, { StyledEmoji } from "./LukeInnhold";
 import { getStraffe } from "../utils";
 
 export const isLukeAvailible = (nummer: number) => {
-    const currentDate = new Date();
-    const openDate = new Date(2020, 11, nummer);
-    if (openDate > currentDate) {
-      return false
-    }
-    return true;
-}
-
-interface ParamTypes {
- lukeNummer: string
-}
+  const currentDate = new Date();
+  const openDate = new Date(currentDate.getFullYear(), 11, nummer);
+  if (openDate > currentDate) {
+    return false;
+  }
+  return true;
+};
 
 const LukeWrapper = () => {
-  const { lukeNummer } = useParams<ParamTypes>();
- const lukeNummerAsInt:number = parseInt(lukeNummer);
- if(lukeNummerAsInt > 24 || lukeNummerAsInt <1 || isNaN(lukeNummerAsInt)) {
-   return (
-     <LukeInnhold nummer={404}>
-       Ingen luke her..
-       <StyledEmoji ariaLabel="emoji-sad" content="😢"/>
-     </LukeInnhold>
-     )
- }
+  const { lukeNummer } = useParams();
+  const lukeNummerAsInt: number = parseInt(lukeNummer ?? "");
+  if (lukeNummerAsInt > 24 || lukeNummerAsInt < 1 || isNaN(lukeNummerAsInt)) {
+    return (
+      <LukeInnhold nummer={404}>
+        Ingen luke her..
+        <StyledEmoji ariaLabel="emoji-sad" content="😢" />
+      </LukeInnhold>
+    );
+  }
 
- if(!isLukeAvailible(lukeNummerAsInt)) {
-   return (
-     <LukeInnhold nummer={lukeNummerAsInt}>
-       Nice try! <br/>
-       <StyledEmoji ariaLabel="chicken-emoji" content="🐣" />
+  if (!isLukeAvailible(lukeNummerAsInt)) {
+    return (
+      <LukeInnhold nummer={lukeNummerAsInt}>
+        Nice try! <br />
+        <StyledEmoji ariaLabel="chicken-emoji" content="🐣" />
+        {getStraffe(lukeNummerAsInt)}
+      </LukeInnhold>
+    );
+  }
 
-       {getStraffe(lukeNummerAsInt)}
-     </LukeInnhold>
-   )
- }
-
- switch(lukeNummer) {
-   case "1":
-     return <Luke1 />;
-   case "2":
-     return <Luke2 />;
-   case "3":
-     return <Luke3/>;
-   case "4":
-     return <Luke4 />;
-   case "5":
-     return <Luke5 />;
-   case "6":
-     return <Luke6 />;
-   case "7":
-     return <Luke7 />;
-   case "8":
-     return <Luke8 />;
-   case "9":
-     return <Luke9 />;
-   case "10":
-     return <Luke10 />;
-   case "11":
-     return <Luke11 />;
-   case "12":
-     return <Luke12 />;
-   case "13":
-     return <Luke13 />;
-   case "14":
-     return <Luke14 />;
-   case "15":
-     return <Luke15 />;
-   case "16":
-     return <Luke16 />;
-   case "17":
-     return <Luke17 />;
-   case "18":
-     return <Luke18 />;
-   case "19":
-     return <Luke19 />;
-   case "20":
-     return <Luke20 />;
-   case "21":
-     return <Luke21 />;
-   case "22":
-     return <Luke22 />;
-   case "23":
-     return <Luke23 />
-   case "24":
-     return <Luke24 />;
-   default:
-     return (
-     <LukeInnhold nummer={404}>
-       Ingen luke her..
-       <StyledEmoji ariaLabel="emoji-sad" content="😢"/>
-     </LukeInnhold>
-     )
-
- }
-
-
-}
+  switch (lukeNummer) {
+    case "1":
+      return <Luke1 />;
+    case "2":
+      return <Luke2 />;
+    case "3":
+      return <Luke3 />;
+    case "4":
+      return <Luke4 />;
+    case "5":
+      return <Luke5 />;
+    case "6":
+      return <Luke6 />;
+    case "7":
+      return <Luke7 />;
+    case "8":
+      return <Luke8 />;
+    case "9":
+      return <Luke9 />;
+    case "10":
+      return <Luke10 />;
+    case "11":
+      return <Luke11 />;
+    case "12":
+      return <Luke12 />;
+    case "13":
+      return <Luke13 />;
+    case "14":
+      return <Luke14 />;
+    case "15":
+      return <Luke15 />;
+    case "16":
+      return <Luke16 />;
+    case "17":
+      return <Luke17 />;
+    case "18":
+      return <Luke18 />;
+    case "19":
+      return <Luke19 />;
+    case "20":
+      return <Luke20 />;
+    case "21":
+      return <Luke21 />;
+    case "22":
+      return <Luke22 />;
+    case "23":
+      return <Luke23 />;
+    case "24":
+      return <Luke24 />;
+    default:
+      return (
+        <LukeInnhold nummer={404}>
+          Ingen luke her..
+          <StyledEmoji ariaLabel="emoji-sad" content="😢" />
+        </LukeInnhold>
+      );
+  }
+};
 
 export default LukeWrapper;
-

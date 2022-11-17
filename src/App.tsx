@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalStyles } from "./theme";
 import LukeWrapper from "./Components/LukeWrapper";
 import Kalender from "./Components/Kalender";
@@ -8,16 +8,12 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <Router>
-        <Switch>
-          <Route path="/julekalender/:lukeNummer">
-            <LukeWrapper />
-          </Route>
-          <Route path="">
-            <Kalender />
-          </Route>
-        </Switch>
-      </Router>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/julekalender/:lukeNummer" element={<LukeWrapper />} />
+          <Route path="/julekalender" element={<Kalender />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

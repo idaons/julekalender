@@ -1,5 +1,5 @@
 import * as React from "react";
-import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
+import LukeInnhold from "../Components/LukeInnhold";
 import Sondag4 from "./Sondag4";
 
 const Luke18 = () => {

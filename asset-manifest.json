@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/julekalender/static/css/main.e6c13ad2.css",
-    "main.js": "/julekalender/static/js/main.e953a63b.js",
+    "main.js": "/julekalender/static/js/main.99b34391.js",
     "static/media/absurdgalleriet.jpg": "/julekalender/static/media/absurdgalleriet.10d1c0f786afe2182b46.jpg",
     "index.html": "/julekalender/index.html",
     "main.e6c13ad2.css.map": "/julekalender/static/css/main.e6c13ad2.css.map",
-    "main.e953a63b.js.map": "/julekalender/static/js/main.e953a63b.js.map"
+    "main.99b34391.js.map": "/julekalender/static/js/main.99b34391.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.e953a63b.js"
+    "static/js/main.99b34391.js"
   ]
 }

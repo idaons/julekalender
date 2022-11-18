@@ -1,11 +1,10 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components/macro";
+import styled from "styled-components";
 import { useState } from "react";
 import Julekule from "./Julekule";
 import { getStraffe, isOdd } from "../utils";
 import { isLukeAvailible } from "./LukeWrapper";
-
 
 export const ÅpenLuketekst = styled.span`
   color: white;

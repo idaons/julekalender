@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Emoji, Tekst } from "../Components/LukeInnhold";
 import { useState } from "react";
-import styled from "styled-components/macro";
+import styled from "styled-components";
 
 const Kriger = () => {
   return (

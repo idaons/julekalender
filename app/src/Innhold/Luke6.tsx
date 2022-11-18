@@ -1,6 +1,6 @@
 import * as React from "react";
 import LukeInnhold, { Tekst } from "../Components/LukeInnhold";
-import styled from "styled-components/macro";
+import styled from "styled-components";
 
 const StyledIframe = styled.iframe`
   margin-top: 1rem;

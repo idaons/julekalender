@@ -1,10 +1,9 @@
 import * as React from "react";
-import styled from "styled-components/macro";
+import styled from "styled-components";
 import { theme } from "../theme";
 import { getRandomFromArray, isOdd } from "../utils";
 
 const farger = ["#FF0700", "#FFAB00", "#123EAB", "#00C90D"];
-
 
 const JulekuleStyle = styled.div<{ nummer: number }>`
   background-color: ${() => farger[getRandomFromArray(farger.length)]};

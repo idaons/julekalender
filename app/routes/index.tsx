@@ -4,11 +4,8 @@ import { GlobalStyles } from "~/src/theme";
 
 export default function Index() {
   return (
-    <div>
-      <GlobalStyles />
-      <main>
-        <Kalender />
-      </main>
-    </div>
+    <main>
+      <Kalender />
+    </main>
   );
 }

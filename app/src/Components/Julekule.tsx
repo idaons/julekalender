@@ -10,8 +10,8 @@ const JulekuleStyle = styled.div<{ nummer: number }>`
   background-image: radial-gradient(circle at right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   border-radius: 50%;
   box-shadow: inset 0.3em 0.3em 1em rgba(255, 255, 255, 0.5);
-  height: ${theme.lukeSize};
-  width: ${theme.lukeSize};
+  height: var(--luke-size);
+  width: var(--luke-size);
   position: relative;
   display: flex;
   align-items: center;
@@ -42,13 +42,13 @@ const Snor = styled.span`
   top: -1.75rem;
   border-style: solid;
   border-radius: 50% 50% 0 0;
-  left: calc(${theme.lukeSize} / 2);
+  left: calc(var(--luke-size) / 2);
 
   &::before {
     content: "";
     display: block;
     height: 50%;
-    background-color: ${theme.background};
+    background-color: var(--background-color);
     position: absolute;
     bottom: 0;
     width: 0.1875rem;

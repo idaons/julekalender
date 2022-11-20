@@ -1,6 +1,7 @@
 import { Outlet, Meta, Links, LiveReload, Scripts, ScrollRestoration } from "@remix-run/react";
 import type { MetaFunction, LinksFunction } from "@remix-run/node";
 import { GlobalStyles } from "./src/theme";
+import styles from "~/src/global.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -9,6 +10,10 @@ export const meta: MetaFunction = () => ({
   description: "Julekalender for stillesittende kontor-nisser",
   title: "Julekalder'n",
 });
+
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
 
 export default function Root() {
   return (
@@ -26,7 +31,6 @@ export default function Root() {
       </head>
       <body>
         <div id="root">
-          <GlobalStyles />
           <Outlet />
           <ScrollRestoration />
           <Scripts />

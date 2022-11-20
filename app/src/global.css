@@ -1,0 +1,34 @@
+:root {
+    --luke-size: 12rem;
+    --background-color: "#091B43";
+}
+
+body, html {
+    background-color: #091B43;
+    color: white;
+    font-family: 'Baloo Da 2', cursive;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*:focus {
+    outline: none;
+    filter: drop-shadow(0 0 1rem goldenrod);
+}
+
+h1 {
+    font-family: 'Lobster Two', cursive;
+    letter-spacing: .1em;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+

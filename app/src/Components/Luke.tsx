@@ -45,7 +45,7 @@ const Luke = (props: { nummer: number }) => {
     }
   };
   return (
-    <StyledLink onClick={(e) => onLukeClick(e)} to={`/julekalender/${props.nummer}`}>
+    <StyledLink onClick={(e) => onLukeClick(e)} to={`/luke/${props.nummer}`}>
       <Julekule nummer={props.nummer}>
         {lukeErÅpen ? (
           <ÅpenLuketekst>Luke {props.nummer}</ÅpenLuketekst>

@@ -7,4 +7,6 @@
 
 ## deploy
 
-`vercel`
+Deploy skjer ved push til master eller ved å kjøre:  
+`npm i -g vercel` (hvis første gang)  
+`vercel --prod`

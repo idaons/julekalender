@@ -1,12 +1,11 @@
 import * as React from "react";
 import Luke from "./Luke";
 import styled from "styled-components";
-import { theme } from "../theme";
 import { Emoji } from "./LukeInnhold";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(${theme.lukeSize}, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--luke-size), 1fr));
   grid-row-gap: 3rem;
   grid-column-gap: 1rem;
   justify-items: center;

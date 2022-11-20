@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { theme } from "../theme";
 import { getRandomFromArray, isOdd } from "../utils";
 
-const farger = ["#FF0700", "#FFAB00", "#123EAB", "#00C90D"];
+const farger = ["#F8B229", "#EA4630", "#146B3A", "#BB2528", "#165B33"];
 
 const JulekuleStyle = styled.div<{ nummer: number }>`
-  background-color: ${() => farger[getRandomFromArray(farger.length)]};
+  background-color: ${(props) => farger[Math.floor(props.nummer % farger.length)]};
   background-image: radial-gradient(circle at right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   border-radius: 50%;
   box-shadow: inset 0.3em 0.3em 1em rgba(255, 255, 255, 0.5);

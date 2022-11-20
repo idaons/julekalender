@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Emoji, Tekst } from "../Components/LukeInnhold";
+import { Emoji, Tekst } from "../../Components/LukeInnhold";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -76,7 +76,6 @@ const Yoga = () => {
   const [yogaPosition, setYogaPosition] = useState("");
   const onYogaSelcted = (e: { currentTarget: any }) => {
     const target = e.currentTarget;
-    console.log("hallo");
     setYogaPosition(target.value);
   };
 

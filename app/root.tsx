@@ -11,9 +11,14 @@ export const meta: MetaFunction = () => ({
   title: "Julekalder'n",
 });
 
-export function links() {
-  return [{ rel: "stylesheet", href: styles }];
-}
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: styles,
+    },
+  ];
+};
 
 export default function Root() {
   return (

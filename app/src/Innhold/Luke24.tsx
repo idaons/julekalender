@@ -1,6 +1,6 @@
 import * as React from "react";
 import LukeInnhold, { Emoji } from "../Components/LukeInnhold";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const StyledIframe = styled.iframe`
   height: 75vh;

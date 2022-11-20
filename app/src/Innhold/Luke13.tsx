@@ -1,6 +1,6 @@
 import * as React from "react";
 import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const StyledEmoji = styled.div`
   font-size: 3rem;

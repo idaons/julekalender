@@ -1,6 +1,6 @@
 import { Emoji, Tekst } from "../Components/LukeInnhold";
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const StyledEmoji = styled.div`
   margin: 1rem 0 3rem;

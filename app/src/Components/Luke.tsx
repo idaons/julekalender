@@ -1,15 +1,13 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { useState } from "react";
 import Julekule from "./Julekule";
 import { getStraffe, isOdd } from "../utils";
 import { isLukeAvailible } from "./LukeWrapper";
+import { Box } from "@chakra-ui/react";
 
-export const ÅpenLuketekst = styled.span`
-  color: white;
-  font-size: 1.25rem;
-`;
+export const ÅpenLuketekst = styled.span``;
 
 export const StengtLuketekst = styled.span<{ nummer: number }>`
   color: white;
@@ -26,12 +24,6 @@ const StyledLink = styled(Link)`
   &:hover,
   &:focus {
     transform: scale(1.1);
-
-    ${ÅpenLuketekst} {
-      transition-duration: 2s;
-      transition-property: transform;
-      transform: rotate(360deg);
-    }
   }
 `;
 
@@ -45,10 +37,17 @@ const Luke = (props: { nummer: number }) => {
     }
   };
   return (
-    <StyledLink onClick={(e) => onLukeClick(e)} to={`/luke/${props.nummer}`}>
+    <StyledLink onClick={(e) => onLukeClick(e)} to={`/luke/${props.nummer}`} role="group">
       <Julekule nummer={props.nummer}>
         {lukeErÅpen ? (
-          <ÅpenLuketekst>Luke {props.nummer}</ÅpenLuketekst>
+          <Box
+            as="span"
+            color="white"
+            fontSize="1.25rem"
+            _groupHover={{ transitionDuration: "2s", transitionProperty: "transform", transform: " rotate(360deg)" }}
+          >
+            Luke {props.nummer}
+          </Box>
         ) : (
           <StengtLuketekst nummer={props.nummer}>Nå var du litt tidlig ute! {getStraffe(props.nummer)}</StengtLuketekst>
         )}

@@ -6,13 +6,12 @@ const Luke1 = () => {
     <LukeInnhold nummer={1}>
       <Tekst>
         <h2>
-          <Emoji ariaLabel="party-emoji" content="🎉" /> Første luke! <Emoji ariaLabel="party-emoji" content="🎉" />{" "}
+          <Emoji ariaLabel="party-emoji" content="🎉" /> Første luke! <Emoji ariaLabel="party-emoji" content="🎉" />
         </h2>
         <p>
-          Realistisk som jeg er, innser jeg at det kanskje også blir din siste..
-          <Emoji ariaLabel="crying-emoji" content="😢" />
+          I tilfelle du synes dette var teit og det også blir din siste, skal du få en oppgave som sikrer litt ekstra
+          aktivitet resten av adventstida.
         </p>
-        <p>Derfor skal du få en oppgave som sikrer litt ekstra aktivitet resten av adventstida!</p>
         <ul>
           <li>
             Finn det mest kronglete stedet i boligen din. Det kan være på loftet, i kjellern, øverst i det høyeste

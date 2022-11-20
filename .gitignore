@@ -7,3 +7,9 @@
 # misc
 /.idea
 
+# remix
+/public/build
+/.cache
+.env
+/public/build/
+.vercel

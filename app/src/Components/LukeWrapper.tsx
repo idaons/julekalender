@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "@remix-run/react";
 import Luke1 from "../Innhold/Luke1";
 import Luke2 from "../Innhold/Luke2";
 import Luke3 from "../Innhold/Luke3";

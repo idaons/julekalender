@@ -76,6 +76,7 @@ const Yoga = () => {
   const [yogaPosition, setYogaPosition] = useState("");
   const onYogaSelcted = (e: { currentTarget: any }) => {
     const target = e.currentTarget;
+    console.log("hallo");
     setYogaPosition(target.value);
   };
 

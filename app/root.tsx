@@ -1,5 +1,6 @@
-import { Outlet, Meta } from "@remix-run/react";
-import type { MetaFunction } from "@remix-run/node";
+import { Outlet, Meta, Links, LiveReload, Scripts, ScrollRestoration } from "@remix-run/react";
+import type { MetaFunction, LinksFunction } from "@remix-run/node";
+import { GlobalStyles } from "./src/theme";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -14,6 +15,7 @@ export default function Root() {
     <html lang="no">
       <head>
         <Meta />
+        <Links />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/logo192.png" />
         <link rel="manifest" href="/manifest.json" />
@@ -24,7 +26,11 @@ export default function Root() {
       </head>
       <body>
         <div id="root">
+          <GlobalStyles />
           <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
         </div>
       </body>
     </html>
@@ -38,13 +44,15 @@ export type ErrorBoundaryProps = {
   };
 };
 export function ErrorBoundary({ error }: ErrorBoundaryProps) {
-  console.error(error);
   return (
     <html>
       <head>
         <title>Oh no!</title>
       </head>
-      <body>{/* add the UI you want your users to see */}</body>
+      <body>
+        <p>A very very critical error has occured</p>
+        <button>Ok, I guess?</button>
+      </body>
     </html>
   );
 }

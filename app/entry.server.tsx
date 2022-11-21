@@ -1,10 +1,11 @@
-import { RemixServer } from "@remix-run/react";
 import { renderToString } from "react-dom/server";
-import { EntryContext } from "@remix-run/node";
-import createEmotionServer from "@emotion/server/create-instance";
 import { CacheProvider } from "@emotion/react";
-import createEmotionCache from "~/createEmotionCache";
+import createEmotionServer from "@emotion/server/create-instance";
+import { RemixServer } from "@remix-run/react";
+import type { EntryContext } from "@remix-run/node";
+
 import { ServerStyleContext } from "./context";
+import createEmotionCache from "./createEmotionCache";
 
 export default function handleRequest(
   request: Request,
@@ -22,6 +23,7 @@ export default function handleRequest(
       </CacheProvider>
     </ServerStyleContext.Provider>
   );
+
   const chunks = extractCriticalToChunks(html);
 
   const markup = renderToString(

@@ -2,6 +2,7 @@ import * as React from "react";
 import Luke from "./Luke";
 import { Emoji } from "./LukeInnhold";
 import styled from "@emotion/styled";
+import UserSpesific from "~/src/Components/UserSpesific/UserSpesific";
 
 const Wrapper = styled.div`
   display: grid;
@@ -39,6 +40,7 @@ function Kalender() {
           <Emoji ariaLabel="nisse-emoji" content="🎅" />
           for stillesittende kontor-nisser
           <Emoji ariaLabel="nisse-emoji" content="🎅" />
+          <UserSpesific />
         </span>
       </Header>
       <Wrapper>

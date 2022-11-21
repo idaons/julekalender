@@ -1,4 +1,4 @@
-import { Outlet, Meta, Links, LiveReload, Scripts, ScrollRestoration } from "@remix-run/react";
+import { Outlet, Meta, Links, LiveReload, Scripts, ScrollRestorations } from "@remix-run/react";
 import type { MetaFunction, LinksFunction } from "@remix-run/node";
 import styles from "~/src/global.css";
 import React, { useContext, useEffect } from "react";
@@ -73,10 +73,11 @@ const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) =>
     </html>
   );
 });
+
 export default function Root() {
   return (
     <Document>
-      <ChakraProvider resetCSS={false} theme={theme}>
+      <ChakraProvider theme={theme}>
         <Outlet />
       </ChakraProvider>
     </Document>
@@ -91,7 +92,6 @@ export type ErrorBoundaryProps = {
 };
 export function ErrorBoundary({ error }: ErrorBoundaryProps) {
   const [visError, setVisError] = React.useState(false);
-  console.log(visError);
   return (
     <html>
       <head>

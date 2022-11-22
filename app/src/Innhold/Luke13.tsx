@@ -18,7 +18,6 @@ const Luke13 = () => {
         <StyledEmoji>
           <Emoji ariaLabel="cat-emoji" content="🐈" />
         </StyledEmoji>
-        <i>- Det må jo være lov å kose seg litt</i>
       </Tekst>
     </LukeInnhold>
   );

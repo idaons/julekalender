@@ -6,7 +6,7 @@ const Lordag2 = () => {
     <Tekst>
       <h2>Helg igjen jo!</h2>
       Og til uka er sjølveste luciadagen. Det krever forberedelse: <br />
-      Gå (type kappgang) til nærmeste apotek og kjøp safran. <br />
+      Gå til nærmeste apotek og kjøp safran. <br />
       <p>
         Stå på høyre ben mens du venter på din tur .
         <StyledEmoji ariaLabel="emoji-leg" content="🦵" />

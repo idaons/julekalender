@@ -1,11 +1,11 @@
-import { Outlet, Meta, Links, LiveReload, Scripts, ScrollRestorations } from "@remix-run/react";
-import type { MetaFunction, LinksFunction } from "@remix-run/node";
-import styles from "~/src/global.css";
-import React, { useContext, useEffect } from "react";
+import { Box, Button, Center, ChakraProvider, Flex, Heading } from "@chakra-ui/react";
 import { withEmotionCache } from "@emotion/react";
-import { ChakraProvider } from "@chakra-ui/react";
-import { ServerStyleContext, ClientStyleContext } from "./context";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useCatch } from "@remix-run/react";
+import React, { useContext, useEffect } from "react";
+import styles from "~/src/global.css";
 import { theme } from "~/theme";
+import { ClientStyleContext, ServerStyleContext } from "./context";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -35,6 +35,7 @@ export let links: LinksFunction = () => {
 
 interface DocumentProps {
   children: React.ReactNode;
+  title?: string;
 }
 
 const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) => {
@@ -56,7 +57,7 @@ const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) =>
   }, []);
 
   return (
-    <html lang="en">
+    <html lang="no">
       <head>
         <Meta />
         <Links />
@@ -77,7 +78,7 @@ const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) =>
 export default function Root() {
   return (
     <Document>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider resetCSS={false} theme={theme}>
         <Outlet />
       </ChakraProvider>
     </Document>
@@ -93,16 +94,39 @@ export type ErrorBoundaryProps = {
 export function ErrorBoundary({ error }: ErrorBoundaryProps) {
   const [visError, setVisError] = React.useState(false);
   return (
-    <html>
-      <head>
-        <title>Oh no!</title>
-      </head>
-      <body>
-        <p>A very very critical error has occured</p>
-        <button onClick={() => setVisError(true)}>Ok, I guess?</button>
-        <p>{error.message}</p>
-        {visError && <p>{error.message}</p>}
-      </body>
-    </html>
+    <Document title="Oh no!">
+      <ChakraProvider theme={theme}>
+        <Flex flexDirection={"column"} alignItems={"center"} marginTop="2rem">
+          <Box fontSize="2rem">💣💥</Box>
+
+          <Heading as="h1">A very very critical error has occured</Heading>
+
+          <Button bg="lightgray" color="black" onClick={() => setVisError(true)} marginY="2rem">
+            Ok, I guess?
+          </Button>
+          {visError && (
+            <Box as="p" fontSize="1.5rem">
+              {error.message}
+            </Box>
+          )}
+        </Flex>
+      </ChakraProvider>
+    </Document>
+  );
+}
+
+export function CatchBoundary() {
+  const caught = useCatch();
+
+  return (
+    <Document title="Oh no!">
+      <ChakraProvider theme={theme}>
+        <Center h="10rem">
+          <Heading as="h1">
+            {caught.status}: {caught.status === 404 ? "Jul not found 🎃" : caught.statusText}{" "}
+          </Heading>
+        </Center>
+      </ChakraProvider>
+    </Document>
   );
 }

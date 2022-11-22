@@ -40,12 +40,7 @@ const LukeWrapper = () => {
   const { lukeNummer } = useParams();
   const lukeNummerAsInt: number = parseInt(lukeNummer ?? "");
   if (lukeNummerAsInt > 24 || lukeNummerAsInt < 1 || isNaN(lukeNummerAsInt)) {
-    return (
-      <LukeInnhold nummer={404}>
-        Ingen luke her..
-        <StyledEmoji ariaLabel="emoji-sad" content="😢" />
-      </LukeInnhold>
-    );
+    throw new Error("Jula varer ikke helt til påske! 🐣 ");
   }
 
   if (!isLukeAvailible(lukeNummerAsInt)) {

@@ -1,7 +1,6 @@
 import * as React from "react";
-import styled from "styled-components";
-import { theme } from "../theme";
-import { getRandomFromArray, isOdd } from "../utils";
+import styled from "@emotion/styled";
+import { isOdd } from "../utils";
 
 const farger = ["#F8B229", "#EA4630", "#146B3A", "#BB2528", "#165B33"];
 

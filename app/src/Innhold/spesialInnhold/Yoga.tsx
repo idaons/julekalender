@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Emoji, Tekst } from "../../Components/LukeInnhold";
 import { useState } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
+import { Box, Select } from "@chakra-ui/react";
 
 const Kriger = () => {
   return (
@@ -65,12 +66,7 @@ const YogaPositions: EnumType = {
 
 type EnumType = { [s: string]: IYoga };
 
-const StyledSelect = styled.select`
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
-  border-radius: 0.2rem;
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-`;
+const StyledSelect = styled.select``;
 
 const Yoga = () => {
   const [yogaPosition, setYogaPosition] = useState("");
@@ -85,17 +81,24 @@ const Yoga = () => {
         Finn din yoga-posisjon! <Emoji ariaLabel="lotus-emoji" content="🧘" />
       </h2>
       <p>Hva identifiserer du deg mest med?</p>
-      <StyledSelect onChange={onYogaSelcted}>
-        <option value="">Velg...</option>
-        {Object.keys(YogaPositions).map((key: string) => (
-          <option value={key} key={key}>
-            {YogaPositions[key].label}
-          </option>
-        ))}
-      </StyledSelect>
-
+      <Box
+        w="200px"
+        padding="0.5rem 1rem 0.5rem 0.5rem"
+        border-radius="0.2rem"
+        font-size="1.25rem"
+        margin-bottom=" 2rem"
+      >
+        <Select onChange={onYogaSelcted} backgroundColor="white" borderColor="tomato" color="black" iconColor="black">
+          <option value="">Velg...</option>
+          {Object.keys(YogaPositions).map((key: string) => (
+            <option value={key} key={key}>
+              {YogaPositions[key].label}
+            </option>
+          ))}
+        </Select>
+      </Box>
       {yogaPosition?.length > 0 && <>{YogaPositions[yogaPosition].komponent}</>}
-    </Tekst>
+    </Tekst> //
   );
 };
 

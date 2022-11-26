@@ -1,11 +1,12 @@
+import { Box, Heading } from "@chakra-ui/react";
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const Wrapper = styled.div`
   padding: 0 1rem 1rem;
   h1 {
     font-size: 4rem;
-    text-align: center;
+    //text-align: center;
     margin: 3rem auto 2.5rem;
 
     @media (max-width: 40rem) {
@@ -56,8 +57,13 @@ interface Props {
 const LukeInnhold = (props: Props) => {
   return (
     <Wrapper>
-      <h1>Luke {props.nummer}</h1>
-      <InnholdStyle>{props.children}</InnholdStyle>
+      <Box margin="0 auto" maxWidth="45rem">
+        <Heading as="h1" variant={"jul"}>
+          Luke {props.nummer}
+        </Heading>
+
+        {props.children}
+      </Box>
     </Wrapper>
   );
 };

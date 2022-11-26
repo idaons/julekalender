@@ -1,7 +1,7 @@
 import * as React from "react";
 import LukeInnhold, { Tekst } from "../Components/LukeInnhold";
 import tegning from "../assets/absurdgalleriet.jpg";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const StyledFigure = styled.figure`
   margin: 0;

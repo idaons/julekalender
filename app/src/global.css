@@ -4,6 +4,7 @@
 }
 
 body, html {
+    all:initial;
     background-color: #091B43;
     color: white;
     font-family: 'Baloo Da 2', cursive;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Luke from "./Luke";
-import styled from "styled-components";
 import { Emoji } from "./LukeInnhold";
+import styled from "@emotion/styled";
 
 const Wrapper = styled.div`
   display: grid;

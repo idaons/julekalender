@@ -1,6 +1,6 @@
 import * as React from "react";
 import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const StyledEmoji = styled.div`
   font-size: 3rem;
@@ -18,7 +18,6 @@ const Luke13 = () => {
         <StyledEmoji>
           <Emoji ariaLabel="cat-emoji" content="🐈" />
         </StyledEmoji>
-        <i>- Det må jo være lov å kose seg litt</i>
       </Tekst>
     </LukeInnhold>
   );

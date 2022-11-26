@@ -1,6 +1,6 @@
 import { Emoji, Tekst } from "../Components/LukeInnhold";
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const StyledEmoji = styled.div`
   margin: 1rem 0 3rem;
@@ -10,7 +10,7 @@ const Sondag3 = () => {
   return (
     <Tekst>
       <h2>Tredje søndag i advent! </h2>
-      Gå til <i>tredje</i> nærmeste bakeri å kjøp deg en kaffe og bolle!
+      Gå / løp / sykle / hink til <i>tredje</i> nærmeste bakeri å kjøp deg en deilig lunsj!
       <br />
       <StyledEmoji>
         <Emoji ariaLabel="emoji-kafevare" content="☕ 🥐" />

@@ -1,7 +1,7 @@
 import * as React from "react";
 import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
 import { useState } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const Kobra = () => {
   return (

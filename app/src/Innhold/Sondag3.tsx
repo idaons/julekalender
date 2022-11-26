@@ -10,12 +10,11 @@ const Sondag3 = () => {
   return (
     <Tekst>
       <h2>Tredje søndag i advent! </h2>
-      Gå / løp / sykle / hink til <i>tredje</i> nærmeste bakeri å kjøp deg en deilig lunsj!
+      Gå / løp / sykle / hink til <i>tredje</i> nærmeste bakeri og kjøp deg en deilig lunsj!
       <br />
       <StyledEmoji>
         <Emoji ariaLabel="emoji-kafevare" content="☕ 🥐" />
       </StyledEmoji>
-      <i>- Det må jo være lov å kose seg litt</i>
     </Tekst>
   );
 };

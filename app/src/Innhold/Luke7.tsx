@@ -13,7 +13,7 @@ const Luke7 = () => {
           bordkanten. Hold en vannflaske eller manual i hånden. Strekk kjapt opp i håndleddet og senk rolig ned igjen.
         </p>
         <p>
-          Antall: <br />2 ganger om av dagen{" "}
+          Antall: <br /> 3 sett med 8 repetisjoner.
         </p>
       </Tekst>
     </LukeInnhold>

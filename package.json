@@ -48,6 +48,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,json,md,ts,tsx}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "tsc",
     "*.{js,jsx,ts,tsx,dummy}": "eslint app"
   },
   "browserslist": {

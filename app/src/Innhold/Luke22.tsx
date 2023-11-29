@@ -13,7 +13,7 @@ const Luke22 = () => {
           ryggen, samtidig som du ser opp i taket. På utpust skyt rygg som en katt. Gjenta 10 ganger.
         </p>
         <p>
-          Når: <br /> Hver gang noen @channel'er deg på slack{" "}
+          Når: <br /> Hver gang du får en notification på mobilen.
         </p>
       </Tekst>
     </LukeInnhold>

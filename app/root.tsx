@@ -2,7 +2,7 @@ import { Box, Button, Center, ChakraProvider, Flex, Heading } from "@chakra-ui/r
 import { withEmotionCache } from "@emotion/react";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useCatch } from "@remix-run/react";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import styles from "~/src/global.css";
 import { theme } from "~/theme";
 import { ClientStyleContext, ServerStyleContext } from "./context";
@@ -38,31 +38,47 @@ interface DocumentProps {
   title?: string;
 }
 
-const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) => {
+const Document = withEmotionCache(({ children, title }: DocumentProps, emotionCache) => {
   const serverStyleData = useContext(ServerStyleContext);
   const clientStyleData = useContext(ClientStyleContext);
+  const reinjectStylesRef = useRef(true);
 
   // Only executed on client
+  // When a top level ErrorBoundary or CatchBoundary are rendered,
+  // the document head gets removed, so we have to create the style tags
   useEffect(() => {
+    if (!reinjectStylesRef.current) {
+      return;
+    }
     // re-link sheet container
     emotionCache.sheet.container = document.head;
+
     // re-inject tags
     const tags = emotionCache.sheet.tags;
     emotionCache.sheet.flush();
     tags.forEach((tag) => {
       (emotionCache.sheet as any)._insertTag(tag);
     });
-    // reset cache to reapply global styles
-    clientStyleData?.reset();
-  }, []);
+
+    // reset cache to re-apply global styles
+    clientStyleData.reset();
+    // ensure we only do this once per mount
+    reinjectStylesRef.current = false;
+  }, [clientStyleData, emotionCache.sheet]);
 
   return (
-    <html lang="no">
+    <html lang="en">
       <head>
+        {title ? <title>{title}</title> : null}
         <Meta />
         <Links />
         {serverStyleData?.map(({ key, ids, css }) => (
-          <style key={key} data-emotion={`${key} ${ids.join(" ")}`} dangerouslySetInnerHTML={{ __html: css }} />
+          <style
+            key={key}
+            data-emotion={`${key} ${ids.join(" ")}`}
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: css }}
+          />
         ))}
       </head>
       <body>
@@ -74,7 +90,6 @@ const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) =>
     </html>
   );
 });
-
 export default function Root() {
   return (
     <Document>

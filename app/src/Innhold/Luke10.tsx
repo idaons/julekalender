@@ -1,11 +1,11 @@
 import * as React from "react";
 import LukeInnhold from "../Components/LukeInnhold";
-import Lordag2 from "./Lordag2";
+import Sondag2 from "~/src/Innhold/Sondag2";
 
 const Luke10 = () => {
   return (
     <LukeInnhold nummer={10}>
-      <Lordag2 />
+      <Sondag2 />
     </LukeInnhold>
   );
 };

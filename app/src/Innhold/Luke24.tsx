@@ -21,7 +21,6 @@ const Luke24 = () => {
       <h2>Fordi det er gøy: sliding puzzle!</h2>
       <StyledIframe src="https://idaons.github.io/css-puzzle/" />
       <p>
-        PS: fungerer uten javascript{" "}
         <StyledLink href={"https://idaons.github.io/css-puzzle/"}>på denne siden</StyledLink>.{" "}
         <Emoji ariaLabel="nerd-emoji" content=" 🤓 " />{" "}
       </p>

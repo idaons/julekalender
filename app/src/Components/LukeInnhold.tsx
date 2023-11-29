@@ -15,13 +15,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const InnholdStyle = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-`;
-
 export const Tekst = styled.div`
   max-width: 45rem;
   font-size: 1.25rem;

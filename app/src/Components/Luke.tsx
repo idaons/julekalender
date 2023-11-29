@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@remix-run/react";
 import styled from "@emotion/styled";
 import { useState } from "react";
 import Julekule from "./Julekule";

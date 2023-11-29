@@ -1,11 +1,21 @@
 import * as React from "react";
-import LukeInnhold from "../Components/LukeInnhold";
-import Sondag3 from "./Sondag3";
+import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
 
 const Luke11 = () => {
   return (
     <LukeInnhold nummer={11}>
-      <Sondag3 />
+      <Tekst>
+        <h2>
+          Nakke <Emoji ariaLabel="giraffe-emoji" content="🦒" />
+        </h2>
+        <p>
+          Plassér den ene hånda på hodet og trekk forsiktig ned mot skulderen. Senk motsatt skulder og kjenn at det
+          strekker på utsiden av nakken. Hold i cirka 5 pust og gjenta øvelsen på motsatt side.
+        </p>
+        <p>
+          Antall: <br /> Spør din personalleder
+        </p>
+      </Tekst>
     </LukeInnhold>
   );
 };

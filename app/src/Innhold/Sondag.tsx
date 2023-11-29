@@ -1,14 +1,14 @@
 import { StyledEmoji, Tekst } from "../Components/LukeInnhold";
 import * as React from "react";
 
-const Sondag4 = () => {
+const Sondag = () => {
   return (
     <Tekst>
-      <h2>Fjerde søndag i advent! </h2>
-      Gå / løp / sykle / hink til <i>fjerde</i> nærmeste bakeri og kjøp deg en deilig lunsj!
+      <h2>Første søndag i advent! </h2>
+      Gå / løp / sykle / hink til ditt nærmeste bakeri å kjøp deg en kaffe og bolle!
       <br />
       <StyledEmoji ariaLabel="emoji-kafevare" content="☕ 🥐" />
     </Tekst>
   );
 };
-export default Sondag4;
+export default Sondag;

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Emoji, Tekst } from "../../Components/LukeInnhold";
 import { useState } from "react";
-import styled from "@emotion/styled";
 import { Box, Select } from "@chakra-ui/react";
 
 const Kriger = () => {
@@ -65,8 +64,6 @@ const YogaPositions: EnumType = {
 };
 
 type EnumType = { [s: string]: IYoga };
-
-const StyledSelect = styled.select``;
 
 const Yoga = () => {
   const [yogaPosition, setYogaPosition] = useState("");

@@ -1,21 +1,16 @@
 import { Emoji, Tekst } from "../Components/LukeInnhold";
 import * as React from "react";
-import styled from "@emotion/styled";
-
-const StyledEmoji = styled.div`
-  margin: 1rem 0 3rem;
-  text-align: center;
-`;
+import styles from "./innhold.module.css";
 
 const Sondag2 = () => {
   return (
     <Tekst>
       <h2>Andre søndag i advent! </h2>
-      Gå / løp / sykle / hink til ditt <i>nest</i> nærmeste bakeri å kjøp deg en kaffe og bolle!
+      Gå / løp / sykle / hink til ditt <i>nest</i> nærmeste bakeri å kjøp deg en drikke og bolle!
       <br />
-      <StyledEmoji>
+      <div className={styles.emoji}>
         <Emoji ariaLabel="emoji-kafevare" content="☕ 🥐" />
-      </StyledEmoji>
+      </div>
     </Tekst>
   );
 };

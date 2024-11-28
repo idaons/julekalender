@@ -5,12 +5,15 @@ const Lordag2 = () => {
   return (
     <Tekst>
       <h2>Helg igjen jo!</h2>
-      Og til uka er sjølveste luciadagen. Det krever forberedelse: <br />
-      Gå til nærmeste apotek og kjøp safran. <br />
       <p>
-        Stå på høyre ben mens du venter på din tur .
+        Finn deg et julemarket og still deg i den lengste køen du finner.
+        <br />
+        Stå på ett ben.
+        <br />
+        Hink ett steg fram når køen beveger seg, deretter kan du bytte ben.
+        <br />
+        Ta en ett-bens knebøy hvis du ser noen snike.
         <StyledEmoji ariaLabel="emoji-leg" content="🦵" />
-        Stå på venstre ben mens du blir ekspedert.
       </p>
     </Tekst>
   );

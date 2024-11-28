@@ -1,20 +1,28 @@
 import * as React from "react";
-import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
+import LukeInnhold, { Tekst } from "../Components/LukeInnhold";
+import styles from "~/src/Innhold/innhold.module.css";
+import tegning from "~/src/assets/absurdgalleriet.jpg";
 
 const Luke11 = () => {
   return (
     <LukeInnhold nummer={11}>
       <Tekst>
-        <h2>
-          Nakke <Emoji ariaLabel="giraffe-emoji" content="🦒" />
-        </h2>
+        <h2>Spiderman pushups</h2>
         <p>
-          Plassér den ene hånda på hodet og trekk forsiktig ned mot skulderen. Senk motsatt skulder og kjenn at det
-          strekker på utsiden av nakken. Hold i cirka 5 pust og gjenta øvelsen på motsatt side.
+          Du trener: <br /> Brystmuskler og mage.
         </p>
         <p>
-          Antall: <br /> Spør din personalleder
+          Ligg på gulvet som om du skal til å ta armhevinger. Hold kroppen helt stiv og rett. Bøy albuene, og senk deg
+          ned mot gulvet. Samtidig fører du venstre kne opp til venstre albue. Strekk armene ut igjen til du er i
+          startposisjonen. Under neste armheving fører du høyre kne opp til høyre albue.
         </p>
+        <p>
+          Antall: <br /> 10 repetisjoner
+        </p>
+        <figure className={styles.figure}>
+          <img src={tegning} alt="Tegning fra absurdgalleriet" />
+          <figcaption className="decorated">Fra absurdgalleriet</figcaption>
+        </figure>
       </Tekst>
     </LukeInnhold>
   );

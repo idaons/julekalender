@@ -1,0 +1,21 @@
+.flex {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    display: flex;
+
+    & p{
+        font-size: 1.5rem;
+    }
+}
+.bomb {
+    font-size: 2rem;
+}
+
+.confirm {
+    background-color: lightgray;
+    color: black;
+    margin: 2rem 0;
+    padding: 4px 8px;
+}
+

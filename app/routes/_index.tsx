@@ -1,7 +1,7 @@
 import Kalender from "~/src/Components/Kalender";
 import React from "react";
 
-export default function Index() {
+export default function _index() {
   return (
     <main>
       <Kalender />

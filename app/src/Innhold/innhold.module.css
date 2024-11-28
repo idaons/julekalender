@@ -1,0 +1,49 @@
+
+.iframe {
+    margin-top: 1rem;
+    width: 50rem;
+    max-width: 95vw;
+    height: 27rem;
+    max-height: 80vh;
+    border: 0px;
+}
+
+.emoji {
+    margin: 1rem 0 3rem;
+    text-align: center;
+}
+
+.puzzle {
+    height: 75vh;
+    max-height: 80vmin;
+
+    width: 55vw;
+    width: max(60vw, 20rem);
+    border: none;
+}
+
+.githublink {
+    color: lightgoldenrodyellow;
+
+}
+
+.figure {
+    margin: 0;
+    max-width: 35rem;
+    & img {
+        width: 100%;
+    }
+
+    & figcaption {
+        font-style: italic;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+}
+
+.select {
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}

@@ -1,12 +1,5 @@
 import * as React from "react";
-import LukeInnhold, { Emoji, Tekst } from "../Components/LukeInnhold";
-import styled from "@emotion/styled";
-
-const StyledEmoji = styled.div`
-  font-size: 3rem;
-  margin: 1rem 0;
-  text-align: center;
-`;
+import LukeInnhold, { StyledEmoji, Tekst } from "../Components/LukeInnhold";
 
 const Luke13 = () => {
   return (
@@ -15,9 +8,7 @@ const Luke13 = () => {
         <h2>Lucia!</h2>
         Lag en lussekatt-deig som du elter for hånd.
         <br />
-        <StyledEmoji>
-          <Emoji ariaLabel="cat-emoji" content="🐈" />
-        </StyledEmoji>
+        <StyledEmoji ariaLabel="cat-emoji" content="🐈" />
       </Tekst>
     </LukeInnhold>
   );

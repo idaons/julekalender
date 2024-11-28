@@ -1,8 +1,7 @@
 import * as React from "react";
 import { Emoji, Tekst } from "../../Components/LukeInnhold";
 import { useState } from "react";
-import { Box, Select } from "@chakra-ui/react";
-
+import styles from "./yoga.module.css";
 const Kriger = () => {
   return (
     <>
@@ -78,22 +77,16 @@ const Yoga = () => {
         Finn din yoga-posisjon! <Emoji ariaLabel="lotus-emoji" content="🧘" />
       </h2>
       <p>Hva identifiserer du deg mest med?</p>
-      <Box
-        w="200px"
-        padding="0.5rem 1rem 0.5rem 0.5rem"
-        border-radius="0.2rem"
-        font-size="1.25rem"
-        margin-bottom=" 2rem"
-      >
-        <Select onChange={onYogaSelcted} backgroundColor="white" borderColor="tomato" color="black" iconColor="black">
+      <div className={styles.selectWrapper}>
+        <select onChange={onYogaSelcted}>
           <option value="">Velg...</option>
           {Object.keys(YogaPositions).map((key: string) => (
             <option value={key} key={key}>
               {YogaPositions[key].label}
             </option>
           ))}
-        </Select>
-      </Box>
+        </select>
+      </div>
       {yogaPosition?.length > 0 && <>{YogaPositions[yogaPosition].komponent}</>}
     </Tekst> //
   );

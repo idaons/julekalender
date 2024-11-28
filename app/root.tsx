@@ -1,23 +1,34 @@
-import { Box, Button, Center, ChakraProvider, Flex, Heading } from "@chakra-ui/react";
-import { withEmotionCache } from "@emotion/react";
+import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
-import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useCatch } from "@remix-run/react";
-import React, { useContext, useEffect, useRef } from "react";
-import styles from "~/src/global.css";
-import { theme } from "~/theme";
-import { ClientStyleContext, ServerStyleContext } from "./context";
+import {
+  isRouteErrorResponse,
+  Links,
+  LiveReload,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  useRouteError,
+} from "@remix-run/react";
+import React, { ReactNode } from "react";
+import styles from "./src/global.css";
+import errorstyles from "./src/error.css";
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  viewport: "width=device-width,initial-scale=1",
-  themeColor: "#091B43",
-  description: "Julekalender for stillesittende kontor-nisser",
-  title: "Julekalder'n",
-});
-
+export const meta: MetaFunction = () => {
+  return [
+    {
+      charset: "utf-8",
+      viewport: "width=device-width,initial-scale=1",
+      themeColor: "#091B43",
+      description: "Julekalender for stillesittende kontor-nisser",
+      title: "Julekalder'n",
+    },
+  ];
+};
 export let links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: styles },
+    { rel: "stylesheet", href: errorstyles },
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     { rel: "preconnect", href: "https://fonts.gstatic.com" },
     {
@@ -30,85 +41,62 @@ export let links: LinksFunction = () => {
     { rel: "preconnect", href: "https://fonts.gstatic.com" },
     { href: "https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap", rel: "stylesheet" },
     { href: "https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap", rel: "stylesheet" },
+    ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   ];
 };
 
-interface DocumentProps {
-  children: React.ReactNode;
-  title?: string;
-}
-
-const Document = withEmotionCache(({ children, title }: DocumentProps, emotionCache) => {
-  const serverStyleData = useContext(ServerStyleContext);
-  const clientStyleData = useContext(ClientStyleContext);
-  const reinjectStylesRef = useRef(true);
-
-  // Only executed on client
-  // When a top level ErrorBoundary or CatchBoundary are rendered,
-  // the document head gets removed, so we have to create the style tags
-  useEffect(() => {
-    if (!reinjectStylesRef.current) {
-      return;
-    }
-    // re-link sheet container
-    emotionCache.sheet.container = document.head;
-
-    // re-inject tags
-    const tags = emotionCache.sheet.tags;
-    emotionCache.sheet.flush();
-    tags.forEach((tag) => {
-      (emotionCache.sheet as any)._insertTag(tag);
-    });
-
-    // reset cache to re-apply global styles
-    clientStyleData.reset();
-    // ensure we only do this once per mount
-    reinjectStylesRef.current = false;
-  }, [clientStyleData, emotionCache.sheet]);
-
+export default function Document(props: { children: ReactNode; title: string }) {
   return (
-    <html lang="en">
+    <html lang="nb">
       <head>
-        {title ? <title>{title}</title> : null}
+        {props.title ? <title>{props.title}</title> : null}
         <Meta />
         <Links />
-        {serverStyleData?.map(({ key, ids, css }) => (
-          <style
-            key={key}
-            data-emotion={`${key} ${ids.join(" ")}`}
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: css }}
-          />
-        ))}
       </head>
       <body>
-        {children}
+        {props.children}
+        <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
     </html>
   );
-});
-export default function Root() {
-  return (
-    <Document>
-      <ChakraProvider resetCSS={false} theme={theme}>
-        <Outlet />
-      </ChakraProvider>
-    </Document>
-  );
 }
 
-export type ErrorBoundaryProps = {
-  error: {
-    message: String;
-    stack: String;
-  };
-};
-export function ErrorBoundary({ error }: ErrorBoundaryProps) {
+export function ErrorBoundary() {
   const [visError, setVisError] = React.useState(false);
-  return (
+  const error = useRouteError();
+  if (isRouteErrorResponse(error)) {
+    return (
+      <Document title="Oh no!">
+        <div className={"flex"}>
+          <h1>
+            {error.status}: {error.status === 404 ? "Jul not found 🎃" : error.statusText}
+          </h1>
+        </div>
+      </Document>
+    );
+  } else if (error instanceof Error) {
+    return (
+      <Document title="Oh no!">
+        <div className={"flex"}>
+          <div className={"bomb"}>💣💥</div>
+          <h1>A very very critical error has occured</h1>
+          <button className={"confirm"} onClick={() => setVisError(true)}>
+            Ok, I guess?
+          </button>
+          {visError && <p>{error.message}</p>}
+        </div>
+      </Document>
+    );
+  } else {
+    return <h1>Unknown Error</h1>;
+  }
+}
+
+/*
+*   return (
     <Document title="Oh no!">
       <ChakraProvider theme={theme}>
         <Flex flexDirection={"column"} alignItems={"center"} marginTop="2rem">
@@ -144,4 +132,4 @@ export function CatchBoundary() {
       </ChakraProvider>
     </Document>
   );
-}
+*/

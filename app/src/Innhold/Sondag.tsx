@@ -5,7 +5,7 @@ const Sondag = () => {
   return (
     <Tekst>
       <h2>Første søndag i advent! </h2>
-      Gå / løp / sykle / hink til ditt nærmeste bakeri å kjøp deg en kaffe og bolle!
+      Gå / løp / sykle / hink til ditt nærmeste bakeri å kjøp deg en drikke og bolle!
       <br />
       <StyledEmoji ariaLabel="emoji-kafevare" content="☕ 🥐" />
     </Tekst>

@@ -1,11 +1,11 @@
 import * as React from "react";
 import LukeInnhold from "../Components/LukeInnhold";
-import Sondag3 from "~/src/Innhold/Sondag3";
+import Yoga2 from "~/src/Innhold/spesialInnhold/Yoga2";
 
 const Luke17 = () => {
   return (
     <LukeInnhold nummer={17}>
-      <Sondag3 />
+      <Yoga2 />
     </LukeInnhold>
   );
 };
